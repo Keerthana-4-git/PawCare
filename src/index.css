@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #303B35;
+  background: #FAF8F2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #FAF8F2;
+  color: #303B35;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-charcoal;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    @apply text-charcoal;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .soft-card {
+    @apply rounded-3xl border border-[#EAF2E9] bg-white shadow-soft;
+  }
+
+  .brand-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#224933] focus:outline-none focus:ring-2 focus:ring-primary/30;
+  }
+
+  .secondary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#D8E4D9] bg-white px-5 py-3 text-sm font-semibold text-charcoal transition hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-charcoal/75 transition hover:text-primary;
+  }
+
+  .provider-image {
+    @apply h-56 w-full object-cover;
+  }
+}
